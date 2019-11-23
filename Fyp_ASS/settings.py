@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6^s*&szi*y77j98tziv8u5w3df!67&!zwzww+im7b+#5wpz^(u'
-
+#SECRET_KEY = '6^s*&szi*y77j98tziv8u5w3df!67&!zwzww+im7b+#5wpz^(u'
+SECRET_KEY=os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0","127.0.0.1","localhost"]
+ALLOWED_HOSTS = ['mysurveillancesapp.herokuapp.com']
 EMIAL_HOST='smtp.gmail.com'
 EMIAL_HOST_USER='ec.smtp.test3@gmail.com'
 EMIAL_HOST_PASSWORD='waqas1995' 
