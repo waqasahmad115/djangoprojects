@@ -7,8 +7,10 @@ cachetools==3.1.1
 certifi==2019.9.11
 chardet==3.0.4
 colorama==0.4.1
+dj-database-url==0.5.0
 Django==2.2.6
 django-crispy-forms==1.8.0
+django-heroku==0.3.1
 django-inline-actions==2.2.0
 django-jet==1.0.8
 django-mysql==3.2.0
@@ -39,6 +41,7 @@ opencv-python==4.1.1.26
 opt-einsum==3.1.0
 Pillow==6.2.1
 protobuf==3.10.0
+psycopg2==2.8.4
 pyasn1==0.4.7
 pyasn1-modules==0.2.7
 pycodestyle==2.5.0
@@ -61,4 +64,5 @@ termcolor==1.1.0
 typed-ast==1.4.0
 urllib3==1.25.6
 Werkzeug==0.16.0
+whitenoise==4.1.4
 wrapt==1.11.2

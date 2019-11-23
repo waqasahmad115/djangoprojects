@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
+import django_heroku
 import socket
 import smtplib
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -254,3 +255,5 @@ CONFIG_DEFAULTS = {
     'SOFT_DELETE': False,
     'NUM_TO_FETCH': 5,
 }
+
+django_heroku.settings(locals())
