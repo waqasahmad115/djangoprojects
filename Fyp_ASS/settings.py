@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
+#use for development of website  on heroku 
 import django_heroku
+
 import socket
 import smtplib
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,10 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = '6^s*&szi*y77j98tziv8u5w3df!67&!zwzww+im7b+#5wpz^(u'
+# this below commented secret key is used for production 
 SECRET_KEY=os.environ.get('SECRET_KEY')
-# SECURITY WARNING: don't run with debug turned on in production!
+#SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# for production make below statement uncomment
+#DEBUG=(os.environ.get('DEBUG_VALUE')=='True')
+# for the project deployment mysurveillancesapp.herokuapp.com
 ALLOWED_HOSTS = ['mysurveillancesapp.herokuapp.com']
 EMIAL_HOST='smtp.gmail.com'
 EMIAL_HOST_USER='ec.smtp.test3@gmail.com'
@@ -209,7 +214,7 @@ REST_FRAMEWORK = {
          'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-         #'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
          'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ),
