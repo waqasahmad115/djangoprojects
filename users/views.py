@@ -14,20 +14,20 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.core.mail import send_mail
 from django.conf import settings
 from rest_framework import viewsets
-from imutils.video import VideoStream
-from imutils.video import FPS
-import numpy as np
-from PIL import Image
-from numpy import asarray, expand_dims
-import imutils
-import pickle
-import time
-import cv2
-from PIL import Image
-from keras.models import load_model
-from keras import backend as K
-K.clear_session()
-detected_poi= {}
+# from imutils.video import VideoStream
+# from imutils.video import FPS
+# import numpy as np
+# from PIL import Image
+# from numpy import asarray, expand_dims
+# import imutils
+# import pickle
+# import time
+# import cv2
+# from PIL import Image
+# from keras.models import load_model
+# from keras import backend as K
+# K.clear_session()
+# detected_poi= {}
 def base(request):
     # print("[INFO] loading face detector...")
     # protoPath = "face_detection/deploy.prototxt"
